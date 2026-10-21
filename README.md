@@ -3,6 +3,7 @@
 [![CI](https://github.com/AlfredoJamesPacino/coinwatch/actions/workflows/ci.yml/badge.svg)](https://github.com/AlfredoJamesPacino/coinwatch/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
+[![PyPI version](https://img.shields.io/pypi/v/coinwatch-cli.svg)](https://pypi.org/project/coinwatch-cli/)
 
 **本地优先的加密货币行情监控与告警引擎。**
 
@@ -39,6 +40,15 @@ CoinWatch 的设计回答就是：**多源兜底 + 阈值告警 + 完全不需�
 ## 快速开始
 
 要求 **Python 3.11+**（用到标准库 `tomllib`）。
+
+最快捷的安装方式：
+
+```bash
+pip install coinwatch-cli
+coinwatch --version
+```
+
+也可以从源码安装（便于开发）：
 
 ```bash
 git clone https://github.com/AlfredoJamesPacino/coinwatch.git
