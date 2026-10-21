@@ -1,0 +1,51 @@
+# CoinWatch configuration EXAMPLE.
+# Copy to config.toml (which is gitignored) and edit:
+#     cp config.example.toml config.toml
+#
+# SECURITY: never commit config.toml — it may hold bot tokens / SMTP passwords.
+
+[watchlist]
+# CoinGecko coin id (lowercase) = display symbol
+# Full id list: https://api.coingecko.com/api/v3/coins/list
+bitcoin  = "BTC"
+ethereum = "ETH"
+solana   = "SOL"
+
+[thresholds]
+# Trigger when |24h change| >= this percentage. 0 disables this rule.
+change_pct_alert = 5.0
+
+# Trigger when 24h quote volume rises this much above the rolling baseline. 0 disables.
+volume_spike_pct = 0.0
+
+# Per-coin price barriers, keyed by coin id (NOT symbol).
+price_above = { "bitcoin" = 200000 }
+price_below = { "ethereum" = 500 }
+
+[notify]
+# Log to stdout. Recommended to keep enabled.
+log = true
+
+# Telegram — get a token from @BotFather, chat id from your chat.
+telegram_token = ""
+telegram_chat_id = ""
+
+# Discord incoming webhook URL.
+discord_webhook = ""
+
+# Email (SMTP). Leave host empty to disable. Use an app-specific password.
+email_smtp_host = ""
+email_smtp_port = 587
+email_smtp_user = ""
+email_smtp_pass = ""
+email_to = ""
+
+[web]
+enabled = false
+host = "127.0.0.1"
+port = 8080
+
+[schedule]
+# Informational only — CoinWatch itself is scheduler-agnostic.
+# Drive it from cron, Windows Task Scheduler, or WorkBuddy automations.
+interval_seconds = 300

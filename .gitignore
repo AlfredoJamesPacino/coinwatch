@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local / secret-bearing config — NEVER commit these
+config.toml
+*.local.toml
+secrets.toml
+.coinwatch_state.json
+
+# Tooling
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "coinwatch"
+version = "0.1.0"
+description = "Local-first crypto market monitor & alert engine. Multi-source failover, zero third-party dependencies."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "MT" }]
+keywords = ["crypto", "bitcoin", "monitoring", "alerting", "cli", "price-tracker"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+# Core runtime has ZERO third-party dependencies (standard library only).
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/AlfredoJamesPacino/coinwatch"
+Repository = "https://github.com/AlfredoJamesPacino/coinwatch"
+Issues = "https://github.com/AlfredoJamesPacino/coinwatch/issues"
+
+[project.scripts]
+coinwatch = "coinwatch.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/coinwatch"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
