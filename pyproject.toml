@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "coinwatch"
+name = "coinwatch-cli"
 version = "0.1.0"
 description = "Local-first crypto market monitor & alert engine. Multi-source failover, zero third-party dependencies."
 readme = "README.md"
