@@ -1,5 +1,9 @@
 # CoinWatch
 
+[![CI](https://github.com/AlfredoJamesPacino/coinwatch/actions/workflows/ci.yml/badge.svg)](https://github.com/AlfredoJamesPacino/coinwatch/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
+
 **本地优先的加密货币行情监控与告警引擎。**
 
 多数据源自动故障切换，标准库零依赖，调度无关（cron / Windows 任务计划 / WorkBuddy 自动化都能驱动）。
