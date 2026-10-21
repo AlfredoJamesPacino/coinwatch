@@ -8,6 +8,7 @@ import sys
 import time
 from pathlib import Path
 
+from . import __version__
 from . import web as web_module
 from .alert import evaluate
 from .config import DEFAULT_CONFIG_NAME, Config, load_config
@@ -104,6 +105,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="coinwatch",
         description="本地优先的加密货币行情监控与告警引擎。",
+    )
+    parser.add_argument(
+        "--version", action="version", version=f"coinwatch {__version__}"
     )
     parser.add_argument("--config", default=None, help=f"配置文件路径（默认 {DEFAULT_CONFIG_NAME}）")
     sub = parser.add_subparsers(dest="command")

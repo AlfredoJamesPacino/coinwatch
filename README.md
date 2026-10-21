@@ -47,6 +47,9 @@ cd coinwatch
 # 安装（可选；不装也能跑）
 pip install -e .
 
+# 确认版本
+coinwatch --version
+
 # 生成配置
 coinwatch init          # 从 config.example.toml 复制出 config.toml
 # 编辑 config.toml，设置自选币种、阈值、通知渠道
@@ -119,7 +122,7 @@ email_to = ""
 | `coinwatch web` | 启动本地面板，默认 `http://127.0.0.1:8080` |
 | `coinwatch init` | 从示例生成 `config.toml` |
 
-所有命令都支持 `--config <path>` 指定配置文件位置。
+所有命令都支持 `--config <path>` 指定配置文件位置；`coinwatch --version` 输出版本号。
 
 ---
 
